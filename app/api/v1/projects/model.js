@@ -26,7 +26,11 @@ const projectSchema = new Schema({
     type: Boolean,
     default: false
   },
-  isDevelopement: {
+  isFakeProject: {
+    type: Boolean,
+    default: false
+  },
+  isDevelopment: {
     type: Boolean,
     default: false
   },
