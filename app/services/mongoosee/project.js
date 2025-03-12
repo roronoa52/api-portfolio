@@ -26,13 +26,13 @@ const getOneProject = async (req) => {
 }
 
 const createProject = async (req) => {
-    const { name, category, image, href, desc, pinned } = req.body
+    const { name, category, image, href, desc, pinned, isDevelopment, contribution } = req.body
 
     const check = await Projects.findOne({ name})
 
     if(check) throw new BadRequestError('project duplikat')
 
-    const result = await Projects.create({name, category, image, href, desc, pinned})
+    const result = await Projects.create({name, category, image, href, desc, pinned, isDevelopment, contribution})
 
     return result
 }

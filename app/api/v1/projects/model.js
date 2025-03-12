@@ -25,6 +25,14 @@ const projectSchema = new Schema({
   pinned: {
     type: Boolean,
     default: false
+  },
+  isDevelopement: {
+    type: Boolean,
+    default: false
+  },
+  contribution: {
+    type: String,
+    default: ""
   }
 })
 
